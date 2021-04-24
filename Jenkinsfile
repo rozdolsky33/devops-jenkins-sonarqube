@@ -2,11 +2,11 @@
 node {
     def SONARQUBE_HOSTNAME = 'sonarqube'
 
-    def GRADLE_HOME = tool name: 'gradle-4.10.2', type: 'hudson.plugins.gradle.GradleInstallation'
+    def GRADLE_HOME = tool name: 'gradle-5.0', type: 'hudson.plugins.gradle.GradleInstallation'
     sh "${GRADLE_HOME}/bin/gradle tasks"
 
     stage('prep') {
-        git url: 'https://github.com/cloudacademy/devops-webapp.git'                
+        git url: 'https://github.com/rozdolsky33/devops-jenkins-sonarqube.git'                
     }
 
     stage('build') {
