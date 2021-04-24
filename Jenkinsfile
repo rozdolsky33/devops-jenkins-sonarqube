@@ -6,7 +6,7 @@ node {
     sh "${GRADLE_HOME}/bin/gradle tasks"
 
     stage('prep') {
-        git url: 'https://github.com/rozdolsky33/devops-jenkins-sonarqube.git'                
+        git url: 'https://github.com/rozdolsky33/devops-webapp'                
     }
 
     stage('build') {
